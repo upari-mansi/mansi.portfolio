@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--tells the browser to interpret the text on this page using UTF-8 encoding"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansi's Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking html to stylesheet-->
+</head>
+<body>
+    <div id = "header">
+        <div class = "container">
+            <nav class="navbar"> <!-- nav tag defines the navigation bar-->
+
+                <ul>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <!---<div class="main-page">
+                <img src="Images/mainpage.jpeg">
+            </div>-->
+
+        </div>
+    </div>
+    <!-----------About--------------->
+
+    <div id= "about"> 
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/aboutme.jpeg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p> I am an Associate Application Analyst with 2 years of experience working on a FinTech product in the Accounts Receivable (AR) domain within SAP FICO.
+                        I bring a strong foundation in communication and people management, along with a growing passion for technology.
+                        While I continue to build my expertise in functional ERP systems, I’m also actively developing technical skills in C++, HTML, JavaScript, and CSS.
+                        I hold a B.E. in Computer Engineering with Honours in Data Science.
+                        I'm now looking to transition into a technical role in software development, where I can blend my functional knowledge with technical capabilities, contribute effectively, and continue learning.
+                    </p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('certificates')">Certificates</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p> 
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span>Web development</span> <br>C++, HTML, CSS, Python</li>
+                            <li> <span>ERP systems</span> <br>SAP FICO (AR)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> <span>2023-current</span> <br> Associate Application Analyst</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li> <span>2025</span> <br>Resume Website</li>
+                            <li> <span>2022</span> <br>Virtual Mouse Using Hand Gestures</li>
+                            <li> <span>2020</span> <br>Educational Website</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certificates">
+                        <ul>
+                            <li> <span>SAP</span> <br>Udemy</li>
+                            <li> <span>Web Development</span> <br>Educative.io</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li> <span>2023</span> <br>B.E in Computer's with Honours in Data Science from SPPU</li>
+                            <li> <span>2019</span> <br>HSC from Sadar Dastur Hormadiar Jr. College</li>
+                            <li><span>2017</span> <br>SSC from CES's Utkarsh English Medium School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------Experiences--------------->
+    <div id="experience">
+        <div class="container">
+            <h1 class="sub-titles">Experience</h1>
+            
+        </div>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
+</body>
+</html>
